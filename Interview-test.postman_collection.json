@@ -7,12 +7,75 @@
 	},
 	"item": [
 		{
+			"name": "https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"jwt = pm.response.json().jwt;",
+							"console.log(jwt);",
+							"",
+							"// Verify the length of the JWT",
+							"pm.test(\"The length of the JWT must be greater than zero\", function () {",
+							"    const jwt = pm.response.json().jwt;",
+							"    pm.expect(jwt.length).to.be.greaterThan(0, \"JWT should not be empty\");",
+							"});",
+							"",
+							"// verify the header of the JWT",
+							"pm.test(\"the JWT must have the correct header\", function () {",
+							"     pm.expect(pm.response.json().jwt).contains(\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\");",
+							"});",
+							"",
+							"pm.collectionVariables.set(\"authToken\", jwt);",
+							"collectionJWT = pm.collectionVariables.get(pm.response.json().jwt);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken",
+					"protocol": "https",
+					"host": [
+						"my-json-server",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"stan-alam",
+						"stan-test-api",
+						"authtoken"
+					]
+				},
+				"description": "get the auth token ;\r\n\r\nvalidate the header of the jwt\r\n\r\nuse the jwt for the next call"
+			},
+			"response": []
+		},
+		{
 			"name": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
+							"\r",
+							"\r",
 							"pm.test(\"Content-Type is present\", function () {\r",
 							"    pm.response.to.have.header(\"Content-Type\");\r",
 							"});\r",
@@ -27,7 +90,9 @@
 							"\r",
 							"pm.test(\"Response time is less than 200ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-							"});"
+							"});\r",
+							"pm.collectionVariables.get(authToken);\r",
+							"console.log(\"this is the authTokn \" + pm.responseData)"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -36,7 +101,12 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
 				"url": {
 					"raw": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
 					"protocol": "https",
@@ -53,6 +123,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": ""
 		}
 	]
 }
