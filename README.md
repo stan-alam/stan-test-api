@@ -170,7 +170,9 @@ Overall stability
 
 Tools
 
-* see tool assment matrix
+-------------------
+
+## Performance Automation Test Plan
 
 
 | Name | Open Source | Scripting Interface | Workload Distribution- Scalability | SUT Resource monitoring |
@@ -187,9 +189,6 @@ Tools
 | OpenLoad | No  | Web based importing data from Excel tables | Programmable by user, heterogeneous | none |
 | SoapUI | Yes | Groovy scripting | Programmable by user, heterogeneous(any OS) Scalable through configuration | none |
 | Silk Performer | No  | Workload editor/ importing Junit | Automated(based on an agent health system), heterogenous | none |
+| Artillery IO \*js | Yes | Javascript - Could be run via CLI | Configured by user,<br><br>homogenous( scalable for cloud architecture )Linux or Windows | HTTP<br><br>Socket.IO<br><br>WebSockets<br><br>Exstensible API |
 
 \*The performance of the test system is enhanced through scalability over multiple test nodes. LoadRunner does
-
--------------------
-
-## Performance Automation Test Plan
