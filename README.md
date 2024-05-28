@@ -145,6 +145,10 @@ console.log("this is the authTokn " + pm.responseData)
 </p>
 
 <p align="center">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman02.gif"width="125%" height="125%">
+</p>
+
+<p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="125%" height="125%">
 </p>
 
