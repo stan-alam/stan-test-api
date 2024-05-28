@@ -86,6 +86,8 @@ console.log("this is the authTokn " + pm.responseData)
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/04.png"width="125%" height="125%">
 </p>
 
+**Observe(above) that we are passing the parsed authToken from the prior GET request to the subsequent POST request**
+
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/05.png"width="125%" height="125%">
 </p>
