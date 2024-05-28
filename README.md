@@ -99,7 +99,7 @@ Automated tests should run parallel to save time
 
 Tests should be self-contained and fail gracefully
 
-Test can be run turnkey (on demand) or through a build trigger
+Test can be run turnkey (on demand) or through an automated build trigger
 
 ## Functional Test Plan
 
@@ -122,8 +122,44 @@ Cover Negative Testing
 
 Sample Test Case
 
+Story:
+
+    As an admin I would like multi tenanant access to my application. Each Tenant should have access to their own data
+
+    Given
+    When
+    Then
+
+## Performance Test Strategy
+
+Speed and responsiveness
+
+Scalability
+
+Throughput
+
+Latency
+
+Soak
+
+Saturation
+
+Are we meeting the Service level agreement (SLA)? 
+    - What metrics are we collecting?
+
+
+• Availability 
+• Response Time
+• Throughput
+• Errors
+• Utilization
+• Latency
+
+Overall stability
 
 
 
-## Performance Test Plan
+
+
+
 
