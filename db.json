@@ -5,6 +5,18 @@
         "title": "hello"
       }
     ],
+    "delete": [
+      {
+        "id": 3,
+        "title": "deleted"
+      }
+    ],
+    "put": [
+      {
+        "id": 4,
+        "title": "modified"
+      }
+    ],
     "profile": {
       "name": "typicode"
     },
