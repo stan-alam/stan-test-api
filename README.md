@@ -16,14 +16,20 @@ The test plan for basic functionality - happy path and some negative tests are a
 here we are using GET and parsing out a dummy JWT, we are also assigning the jwt to variable so we can use in the subsequent test
 ```
 
-```js
-//GET
+```ascii
+GET
 https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 
 ```
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="125%" height="125%">
 </p>
+
+```ascii
+POST
+https://my-json-server.typicode.com/stan-alam/stan-test-api/posts
+
+```
 
 ```js
 
