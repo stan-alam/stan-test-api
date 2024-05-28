@@ -7,17 +7,14 @@ const Hapi = require('hapi'),
     path = require('path');
 
 const server = new Hapi.Server({
-    port: 3001
+    port: 3000
 });
 
 server.route({
     method: 'GET',
     path: '/token/{value?}',
     handler: function(req, h) {
-        var output = spawn('./token/New-Token.ps1 -authToken ${value}', function(error, stdout, stderr) {
-            return console.log(stdout);
-        });
-        return output.stdout;
+        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     }
 });
 
@@ -25,10 +22,7 @@ server.route({
     method: 'POST',
     path: '/makepizza/{value?}',
     handler: function(req, h) {
-        var output = spawn('./makePizza.ps1', function(error, stdout, stderr) {
-            return console.log(stdout);
-        });
-        return output.stdout;
+        return "making pizza"
     }
 });
 
@@ -36,20 +30,24 @@ server.route({
     method: 'PUT',
     path: '/modifypizza/{value?}',
     handler: function(req, h) {
+        if (req.params.value == 'nopineapple') {
+          return "no pineapple pizza"
+        }
+
         if (req.params.value == 'add') {
-            var output = spawn('./addTopping.ps1', function(error, stdout, stderr) {
+            var output = spawn('./New-Topping.ps1', function(error, stdout, stderr) {
                 return console.log(stdout);
             });
 
             return output.stdout;
         } else if (req.params.value == 'remove') {
-            var output = spawn('./removeTopping.sh', function(error, stdout, stderr) {
+            var output = spawn('./Delete-Topping.ps1', function(error, stdout, stderr) {
                 return console.log(stdout);
             });
 
             return output.stdout;
         } else
-            var output = spawn('./hello.ps1', function(error, stdout, stderr) {
+            var output = spawn('./Invoke-Hello.ps1', function(error, stdout, stderr) {
                 return console.log(stdout);
             });
         return output.stdout;
