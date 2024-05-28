@@ -56,6 +56,7 @@ pm.test("Body matches string", function () {
 pm.test("Response time is less than 200ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(200);
 });
+
 pm.collectionVariables.get(authToken);
 console.log("this is the authTokn " + pm.responseData)
 
@@ -85,11 +86,19 @@ console.log("this is the authTokn " + pm.responseData)
 newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
 ```
 
-Screencaptures for GET, POST, PUT, DELETE
+Links to Screencaptures for GET, POST, PUT, DELETE
 
 GET
+https://github.com/stan-alam/stan-test-api/blob/develop/images/01.png
 
+POST
+https://github.com/stan-alam/stan-test-api/blob/develop/images/02.png
 
+PUT
+https://github.com/stan-alam/stan-test-api/blob/develop/images/PUTS_resource.png
+
+DELETE
+https://github.com/stan-alam/stan-test-api/blob/develop/images/delete_resource.png
 
 
 ## Test Strategy for Automation
