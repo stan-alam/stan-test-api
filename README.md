@@ -11,8 +11,9 @@ The test plan for basic functionality - happy path and some negative tests are a
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
 </p>
-
-**here we are using GET and parsing out a dummy JWT, we are also assigning the jwt to variable where we can use in the subsequent test**
+```text
+here we are using GET and parsing out a dummy JWT, we are also assigning the jwt to variable so we can use in the subsequent test
+```
 ```js
 //GET
 https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
@@ -20,6 +21,28 @@ https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="125%" height="125%">
 </p>
+
+```js
+
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(201);
+});
+
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("2");
+});
+
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+pm.collectionVariables.get(authToken);
+console.log("this is the authTokn " + pm.responseData)
+
+```
 
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/03.png"width="125%" height="125%">
