@@ -7,14 +7,14 @@ const Hapi = require('hapi'),
     path = require('path');
 
 const server = new Hapi.Server({
-    port: 3000
+    port: 3001
 });
 
 server.route({
     method: 'GET',
     path: '/token/{value?}',
     handler: function(req, h) {
-        var output = spawn('./generateToken.ps1', function(error, stdout, stderr) {
+        var output = spawn('./token/New-Token.ps1 -authToken ${value}', function(error, stdout, stderr) {
             return console.log(stdout);
         });
         return output.stdout;
@@ -75,3 +75,12 @@ async function startServer() {
 }
 
 startServer();
+
+process.on('SIGINT', function () {  
+    console.log('stopping stan-hapi-server on CRT-C')
+  
+    server.stop({ timeout: 10000 }).then(function (err) {
+      console.log('stan-hapi-server stopped')
+      process.exit((err) ? 1 : 0)
+    })
+  })
