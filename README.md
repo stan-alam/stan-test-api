@@ -4,11 +4,9 @@ stan test for interview
 ```text
 First we cover the basic API functionality (happy path).
 Screencaptures are displayed to show that the API is behaving in basic CRUD operations
+For demonstration purposes we are using the assertion library provided with Postman/Newman
+The test plan for basic functionality - happy path and some negative tests are also attached
 ```
-
-## The Screenshots below demonstrate that the mock API is available and we are able to test against, albiet limited compared to a server.
-## For demonstration we are using the assertion library provided with Postman/Newman
-## The test plan for basic functionality - happy path and some negative tests are also attached
 
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="80%" height="80%">
