@@ -18,16 +18,16 @@ The test plan for basic functionality - happy path and some negative tests are a
 Links to Screencaptures for GET, POST, PUT, DELETE
 
 GET
-https://github.com/stan-alam/stan-test-api/blob/develop/images/01.png
+https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/01.png
 
 POST
-https://github.com/stan-alam/stan-test-api/blob/develop/images/02.png
+https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/02.png
 
 PUT
-https://github.com/stan-alam/stan-test-api/blob/develop/images/PUTS_resource.png
+https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/PUTS_resource.png
 
 DELETE
-https://github.com/stan-alam/stan-test-api/blob/develop/images/delete_resource.png
+https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/delete_resource.png
 
 
 
@@ -42,7 +42,7 @@ https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 ```
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/01.png"width="125%" height="125%">
 </p>
 
 
@@ -95,7 +95,7 @@ pm.test("Jwt has a valid format", function () {
 
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/02.png"width="125%" height="125%">
 </p>
 
 ```ascii
@@ -130,25 +130,25 @@ console.log("this is the authTokn " + pm.responseData)
 ```
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/03.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/03.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/04.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/04.png"width="125%" height="125%">
 </p>
 
 **Observe(above) that we are passing the parsed authToken from the prior GET request to the subsequent POST request**
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/05.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/05.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/newman01.gif"width="125%" height="125%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman01.gif"width="125%" height="125%">
 </p>
 
 ```cli
