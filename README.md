@@ -190,3 +190,6 @@ Tools
 
 \*The performance of the test system is enhanced through scalability over multiple test nodes. LoadRunner does
 
+-------------------
+
+## Performance Automation Test Plan
