@@ -43,6 +43,55 @@ GET
 https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 
 ```
+
+```js
+jwt = pm.response.json().jwt;
+console.log(jwt);
+
+// Verify the length of the JWT
+pm.test("The length of the JWT must be greater than zero", function () {
+    const jwt = pm.response.json().jwt;
+    pm.expect(jwt.length).to.be.greaterThan(0, "JWT should not be empty");
+});
+
+// verify the header of the JWT
+pm.test("the JWT must have the correct header", function () {
+     pm.expect(pm.response.json().jwt).contains("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9");
+});
+
+pm.collectionVariables.set("authToken", jwt);
+collectionJWT = pm.collectionVariables.get(pm.response.json().jwt);
+
+pm.globals.get(pm.response.json().jwt);
+let AuthToken = pm.globals.set("authToken", pm.response.json().jwt);
+
+
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+pm.test("Response Content-Type header is 'application/json'", function () {
+    pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
+});
+
+
+pm.test("Jwt should not be empty", function () {
+    const responseData = pm.response.json();
+    
+    pm.expect(responseData.jwt).to.exist.and.to.not.be.empty;
+});
+
+
+pm.test("Jwt has a valid format", function () {
+  const responseData = pm.response.json();
+  
+  pm.expect(responseData.jwt).to.be.a('string');
+  pm.expect(responseData.jwt).to.match(/^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/);
+})
+```
+
+
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="125%" height="125%">
 </p>
