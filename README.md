@@ -182,8 +182,8 @@ Write-Host "============================="
 
   'This is functional Test Env'
 
-echo "this is the working dir "
-echo $pwd
+Write-Host "this is the working dir "
+Write-Host $pwd
    
 cd SmokeTest\
 
@@ -192,11 +192,11 @@ newman run Test-01.json --env-var "tenantID=$Env:TENANT_ID" -r htmlextra --repor
 
      If ($LASTEXITCODE -ne 0) {
      $SmokeTest = 1
-     echo "SmokeTest failed" # this could be critical fail and we may not proceed to the next series of tests - but for the interview demo, we will
+     Write-Host "SmokeTest failed -this could be critical fail and we may not proceed to the next series of tests - but for the interview demo - continue"
      
   } Else {
    
-echo "running next series of Tests"
+Write-Host "running next series of Tests"
 }    
 cd ..    
 cd framework\apitests\stan-test-api\
