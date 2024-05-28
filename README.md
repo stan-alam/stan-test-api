@@ -85,6 +85,13 @@ console.log("this is the authTokn " + pm.responseData)
 newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
 ```
 
+Screencaptures for GET, POST, PUT, DELETE
+
+GET
+
+
+
+
 ## Test Strategy for Automation
 
 * Who
@@ -138,41 +145,51 @@ Story:
     When
     Then
 
-## Performance Test Strategy
+# Performance Test Strategy
 
-Speed and responsiveness
+## Are we meeting the Service level agreement (SLA)?  
 
-Scalability
 
-Throughput
+**Why are we performance testing :**
 
-Latency
+    
+    i.e. 
+    • Availability 
+    • Response Time
+    • Throughput
+    • Errors
+    • Utilization
+    • Latency
 
-Soak
+**What are we testing :**
+    Speed and responsiveness
 
-Saturation
+    Scalability
 
-Are we meeting the Service level agreement (SLA)? 
+    Throughput
+
+    Latency
+
+    Soak
+
+    Saturation
+
     - What metrics are we collecting?
 
 
-• Availability 
-• Response Time
-• Throughput
-• Errors
-• Utilization
-• Latency
-
-Overall stability
+## Performance Test Automation Plan
 
 
----------------------------
+
+
+## Performance Test Case
+
+
+--------------------
 
 Tools
 
--------------------
-
-## Performance Automation Test Plan
+--------------------
 
 
 | Name | Open Source | Scripting Interface | Workload Distribution- Scalability | SUT Resource monitoring |
@@ -190,5 +207,11 @@ Tools
 | SoapUI | Yes | Groovy scripting | Programmable by user, heterogeneous(any OS) Scalable through configuration | none |
 | Silk Performer | No  | Workload editor/ importing Junit | Automated(based on an agent health system), heterogenous | none |
 | Artillery IO \*js | Yes | Javascript - Could be run via CLI | Configured by user,<br><br>homogenous( scalable for cloud architecture )Linux or Windows | HTTP<br><br>Socket.IO<br><br>WebSockets<br><br>Exstensible API |
+| K6  | Yes | goja programming language, which is an implementation of ES2015(ES6) JavaScript on pure Golang | Scalable for cloud architectures (developer centric) | Extensible |
 
 \*The performance of the test system is enhanced through scalability over multiple test nodes. LoadRunner does
+
+## Performance Test Automation Requirements
+
+**Architecture**
+
