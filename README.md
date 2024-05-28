@@ -9,30 +9,30 @@ The test plan for basic functionality - happy path and some negative tests are a
 ```
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/02.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/03.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/03.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/04.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/04.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/05.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/05.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="125%" height="125%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/newman01.gif"width="95%" height="95%">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/newman01.gif"width="125%" height="125%">
 </p>
 
