@@ -15,6 +15,20 @@ Screencaptures are displayed to show that the API is behaving with basic CRUD op
 For demonstration purposes we are using the assertion library provided with Postman/Newman
 The test plan for basic functionality - happy path and some negative tests are also attached
 ```
+Links to Screencaptures for GET, POST, PUT, DELETE
+
+GET
+https://github.com/stan-alam/stan-test-api/blob/develop/images/01.png
+
+POST
+https://github.com/stan-alam/stan-test-api/blob/develop/images/02.png
+
+PUT
+https://github.com/stan-alam/stan-test-api/blob/develop/images/PUTS_resource.png
+
+DELETE
+https://github.com/stan-alam/stan-test-api/blob/develop/images/delete_resource.png
+
 
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
@@ -38,6 +52,8 @@ POST
 https://my-json-server.typicode.com/stan-alam/stan-test-api/posts
 
 ```
+
+**Assertions are provided using POSTMAN and Reporting via Newman**
 
 ```js
 
@@ -85,21 +101,6 @@ console.log("this is the authTokn " + pm.responseData)
 ```cli
 newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
 ```
-
-Links to Screencaptures for GET, POST, PUT, DELETE
-
-GET
-https://github.com/stan-alam/stan-test-api/blob/develop/images/01.png
-
-POST
-https://github.com/stan-alam/stan-test-api/blob/develop/images/02.png
-
-PUT
-https://github.com/stan-alam/stan-test-api/blob/develop/images/PUTS_resource.png
-
-DELETE
-https://github.com/stan-alam/stan-test-api/blob/develop/images/delete_resource.png
-
 
 ## Test Strategy for Automation
 
@@ -218,9 +219,13 @@ Tools
 | Artillery IO \*js | Yes | Javascript - Could be run via CLI | Configured by user,<br><br>homogenous( scalable for cloud architecture )Linux or Windows | HTTP<br><br>Socket.IO<br><br>WebSockets<br><br>Exstensible API |
 | K6  | Yes | goja programming language, which is an implementation of ES2015(ES6) JavaScript on pure Golang | Scalable for cloud architectures (developer centric) | Extensible |
 
-\*The performance of the test system is enhanced through scalability over multiple test nodes. LoadRunner does
-
+\*The performance of the test system is enhanced through scalability over multiple test nodes.
 ## Performance Test Automation Requirements
+
+**The performance test framework should be modular and scalable**
+
+Automation scripts should scale 
+
 
 **Architecture**
 
