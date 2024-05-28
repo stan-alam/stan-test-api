@@ -5,12 +5,6 @@
         "title": "hello"
       }
     ],
-    "delete": {
-      "name": "deleted"
-    },
-    "put": {
-      "name": "modified"
-    },
       "authtoken": {
         "jwt" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0eXBpY29kZSIsImlhdCI6MTUxNjIzOTAyMn0.1Q2w3e4r5t6y7u8i9o0p1a2s3d4f5g6h7j8k9l0zxcvbnm"
     },
@@ -18,6 +12,18 @@
       {
         "id": 2,
         "body": "how goes it?"
+      }
+    ],
+    "put": [
+      {
+        "id": 3,
+        "body": "put me in coach"
+      }
+    ],
+    "delete": [
+      {
+        "id": 4,
+        "body": "hit the road jack"
       }
     ]
   }
