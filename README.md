@@ -30,9 +30,6 @@ DELETE
 https://github.com/stan-alam/stan-test-api/blob/develop/images/delete_resource.png
 
 
-<p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
-</p>
 
 ```text
 here we are using GET and parsing out a dummy JWT, we are also assigning the jwt to variable so we can use in the subsequent test
@@ -43,6 +40,11 @@ GET
 https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 
 ```
+
+<p align="center">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/01.png"width="125%" height="125%">
+</p>
+
 
 ```js
 jwt = pm.response.json().jwt;
