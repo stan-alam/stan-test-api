@@ -145,10 +145,6 @@ console.log("this is the authTokn " + pm.responseData)
 </p>
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman02.gif"width="125%" height="125%">
-</p>
-
-<p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/2024-05-27%2020_20_15-_newman%20run%20Interview-test.postman_c%20-%20Notepad.png"width="125%" height="125%">
 </p>
 
@@ -156,8 +152,57 @@ console.log("this is the authTokn " + pm.responseData)
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman01.gif"width="125%" height="125%">
 </p>
 
+<p align="center">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman02.gif"width="125%" height="125%">
+</p>
+**Test passing**
+
 ```cli
 newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
+```
+**We can also pass environment vars to our newman tests via the CLI - which would lend itself to CI/CD
+
+```PS
+npm install -g newman-reporter-htmlextra
+$Env:PASSWORD='password'
+$Env:TENANT_ID='5'
+$Env:USERNAME='stan.alam'
+$Env:TESTENV=${env:ENVY}
+$Env:AUTH=${env:ENVY}
+
+Write-Host "============================="
+Write-Host "Password:    " $Env:PASSWORD
+Write-Host "UserName:    " $Env:USERNAME
+Write-Host "TestEnv:     " $Env:TESTENV
+Write-Host "authEndPoint:" $Env:AUTH
+Write-Host "============================="
+
+  If ($Env:AUTH  -eq 'Functional_Test_Environment')  {
+
+  'This is functional Test Env'
+
+echo "this is the working dir "
+echo $pwd
+   
+cd SmokeTest\
+
+((Get-Content -Path Test-01.json) -replace 'TESTENV',$Env:TESTENV -replace 'authEndPoint',$Env:AUTH) | Set-Content -Path Test-01.json
+newman run Test-01.json --env-var "tenantID=$Env:TENANT_ID" -r htmlextra --reporter-htmlextra-export
+
+     If ($LASTEXITCODE -ne 0) {
+     $SmokeTest = 1
+     echo "SmokeTest failed" # this could be critical fail and we may not proceed to the next series of tests - but for the interview demo, we will
+     
+  } Else {
+   
+echo "running next series of Tests"
+}    
+cd ..    
+cd framework\apitests\stan-test-api\
+
+....
+
+}
 ```
 
 ## Test Strategy for Automation
