@@ -155,12 +155,13 @@ console.log("this is the authTokn " + pm.responseData)
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/newman02.gif"width="125%" height="125%">
 </p>
+
 **Test passing**
 
 ```cli
 newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
 ```
-**We can also pass environment vars to our newman tests via the CLI - which would lend itself to CI/CD
+**We can also pass environment vars to our newman tests via the CLI - which would lend itself to CI/CD**
 
 ```PS
 npm install -g newman-reporter-htmlextra
