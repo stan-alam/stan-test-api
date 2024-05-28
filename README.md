@@ -1,6 +1,14 @@
 # stan-test-api
 stan test for interview
 
+**mock API**
+https://my-json-server.typicode.com/stan-alam/stan-test-api/
+
+example resource 
+
+https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
+
+
 ```text
 First we cover the basic API functionality (happy path).
 Screencaptures are displayed to show that the API is behaving with basic CRUD operations
