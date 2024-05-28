@@ -60,31 +60,32 @@ pm.test("The length of the JWT must be greater than zero", function () {
 pm.test("the JWT must have the correct header", function () {
      pm.expect(pm.response.json().jwt).contains("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9");
 });
-
+// assign the jwt to authToken to collections var
 pm.collectionVariables.set("authToken", jwt);
 collectionJWT = pm.collectionVariables.get(pm.response.json().jwt);
 
+//assign the jwt to the global var
 pm.globals.get(pm.response.json().jwt);
 let AuthToken = pm.globals.set("authToken", pm.response.json().jwt);
 
-
+// Verify that the status code is 200
 pm.test("Response status code is 200", function () {
     pm.response.to.have.status(200);
 });
 
-
+// Verify that the response header is of Content-Type applicaiton/json
 pm.test("Response Content-Type header is 'application/json'", function () {
     pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
 });
 
-
+// Verify that the JWT should not be empty --Negative Test
 pm.test("Jwt should not be empty", function () {
     const responseData = pm.response.json();
     
     pm.expect(responseData.jwt).to.exist.and.to.not.be.empty;
 });
 
-
+// Verify that the JWT is a valid format
 pm.test("Jwt has a valid format", function () {
   const responseData = pm.response.json();
   
