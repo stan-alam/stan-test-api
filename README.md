@@ -73,3 +73,57 @@ console.log("this is the authTokn " + pm.responseData)
   <img src="https://github.com/stan-alam/stan-test-api/blob/master/images/newman01.gif"width="125%" height="125%">
 </p>
 
+```cli
+newman run Interview-test.postman_collection.json -r htmlextra --reporter-htmlextra-export
+```
+
+## Test Strategy for Automation
+
+* Who
+* What
+* Where
+* When
+* Why
+* How
+
+Test Framework
+What is already automated ?
+What can be automated ?
+    e.g. can be quickly integrated into CI/CD - e.g. automated smoke test? health checks, fast feedback loop
+
+What is the MVP? Does the MVP need to be broken down into epics or stories?
+
+Framework needs to be exstensible and light weight
+
+Automated tests should run parallel to save time
+
+Tests should be self-contained and fail gracefully
+
+Test can be run turnkey (on demand) or through a build trigger
+
+## Functional Test Plan
+
+**check to see if there is Open API specification or Swagger.io (this may or may not be the source of truth)
+
+ Cover all CRUD operations for Happy Path
+
+1. Validate all status codes are correct 
+
+2. Test against HTTP, HTTPS
+
+3. Validate API endpoints with resources
+
+4. Validate response bodies are returned properly as expected
+
+
+Cover Negative Testing
+
+
+
+Sample Test Case
+
+
+
+
+## Performance Test Plan
+
