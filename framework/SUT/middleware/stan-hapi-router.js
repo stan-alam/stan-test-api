@@ -71,7 +71,7 @@ server.route({
 
 async function startServer() {
     await server.start();
-    console.log('Go to : 192.000.00.00:' + server.info.port);
+    console.log('Go to : 127.0.0.1:' + server.info.port);
 }
 
 startServer();
