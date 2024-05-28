@@ -14,13 +14,13 @@
         "body": "how goes it?"
       }
     ],
-    "put": [
+    "puts": [
       {
         "id": 3,
         "body": "put me in coach"
       }
     ],
-    "delete": [
+    "deletes": [
       {
         "id": 4,
         "body": "hit the road jack"
