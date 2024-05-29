@@ -31,9 +31,27 @@ const init = async () => {
           return `Welcome ${payload.username}!`;
         }
       });
+
+      stanHapiServer.route({
+        method: 'PUT',
+        path: '/update',
+        handler: (request, h) => {
+          const payload = request.payload;
+          return `ok modified ${payload.username}!`;
+        }
+      });
+
+      stanHapiServer.route({
+        method: 'DELETE',
+        path: '/signup',
+        handler: (request, h) => {
+          const payload = request.payload;
+          return `Welcome ${payload.username}!`;
+        }
+      });
 };
     
-process.on('unhandledRejection', (err) => {
+process.on('Unhandled Error', (err) => {
 
     console.log(err);
     process.exit(1);
