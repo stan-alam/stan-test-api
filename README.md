@@ -312,6 +312,14 @@ Tools
 
 --------------------
 
+<p align="center">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/Agile-Testing-Quadrants.png"width="125%" height="125%">
+</p>
+
+image credit :
+  https://www.linkedin.com/in/lisa-crispin-88420a/
+
+
 
 | Name | Open Source | Scripting Interface | Workload Distribution- Scalability | SUT Resource monitoring |
 | --- | --- | --- | --- | --- |
