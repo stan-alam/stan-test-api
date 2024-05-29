@@ -303,9 +303,11 @@ Story:
     - What metrics are we collecting?
 
 
-## Performance Test Automation Plan
+## API Performance Test Automation Plan
 
-- [ ] 
+- [ ] Identify services
+
+- [ ] Identify environments *may need to consult AWS representive when using high traffic simulations*
 
 - [ ] Reporting
      - Performance Test Coverage matrix
@@ -365,6 +367,7 @@ Automation scripts should scale
 
 
 
+
 ----
 SUT
 
@@ -379,7 +382,7 @@ https://x.com/hashtag/nodebf
 ```js
 // to run : nohup node stan-hapi-router.js &
 // to kill : ps aux | grep stan-hapi-router.js
-//or 
+// kill by process id
 // pkill -f stan-hapi-router.js
 const { server } = require('@hapi/hapi');
 const routerUp = async () => {
