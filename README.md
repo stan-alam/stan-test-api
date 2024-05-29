@@ -274,9 +274,7 @@ Story:
 
 ## Are we meeting the Service level agreement (SLA)?  
 
-
 **Why are we performance testing :**
-
     
     i.e. 
     • Availability 
@@ -308,6 +306,8 @@ Story:
 - [ ] Identify services
 
 - [ ] Identify environments *may need to consult AWS representive when using high traffic simulations*
+
+- [ ] Identify User journeys - high traffic areas in API usage
 
 - [ ] Reporting
      - Performance Test Coverage matrix
