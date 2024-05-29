@@ -4,7 +4,7 @@
 //or 
 // pkill -f stan-hapi-router.js
 const { server } = require('@hapi/hapi');
-const init = async () => {
+const routerUp = async () => {
 
     const stanHapiServer = server({
         port: 3000,
@@ -46,7 +46,7 @@ const init = async () => {
         path: '/signup',
         handler: (request, h) => {
           const payload = request.payload;
-          return `Welcome ${payload.username}!`;
+          return `Goodbye! ${payload.username}!`;
         }
       });
 };
@@ -57,4 +57,4 @@ process.on('Unhandled Error', (err) => {
     process.exit(1);
 });
 
-init();
+routerUp();
