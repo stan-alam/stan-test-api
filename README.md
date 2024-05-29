@@ -346,6 +346,12 @@ Automation scripts should scale
 ----
 SUT
 
+## Black Friday? What Black Friday?
+
+https://twitter.com/hpoom/status/538264467998801920
+
+https://x.com/hashtag/nodebf
+
 **basic hapi router - No validation or error handling outside of process start**
 
 ```js
