@@ -30,27 +30,7 @@ server.route({
     method: 'PUT',
     path: '/modifypizza/{value?}',
     handler: function(req, h) {
-        if (req.params.value == 'nopineapple') {
-          return "no pineapple pizza"
-        }
-
-        if (req.params.value == 'add') {
-            var output = spawn('./New-Topping.ps1', function(error, stdout, stderr) {
-                return console.log(stdout);
-            });
-
-            return output.stdout;
-        } else if (req.params.value == 'remove') {
-            var output = spawn('./Delete-Topping.ps1', function(error, stdout, stderr) {
-                return console.log(stdout);
-            });
-
-            return output.stdout;
-        } else
-            var output = spawn('./Invoke-Hello.ps1', function(error, stdout, stderr) {
-                return console.log(stdout);
-            });
-        return output.stdout;
+        return "modifying pizza";
     }
 });
 
@@ -58,12 +38,7 @@ server.route({
     method: 'DELETE',
     path: '/deleteorder/{value?}',
     handler: function(req, h) {
-        
-            var output = spawn('./deletePizza -${req.params.value}', function(error, stdout, stderr) {
-                return console.log(stdout);
-            });
-
-        return output.stdout;
+        return "deleting order";
     }
 });
 
