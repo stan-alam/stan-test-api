@@ -242,11 +242,22 @@ Test can be run turnkey (on demand) or through an automated build trigger
 
 3. Validate API endpoints with resources
 
-4. Validate response bodies are returned properly as expected
+4. Validate Query String parameters e.g. pagination
+
+5. Validate response bodies are returned properly as expected
 
 
 Cover Negative Testing
 
+1. Use malformed headers including auth headers
+
+2. SQL injection
+
+3. use malformed payloads or invalid payloads
+
+4. Use DDOS type of attack
+
+5. Validate error codes are correct 
 
 
 Sample Test Case
@@ -298,8 +309,11 @@ Story:
 
 - [ ] Reporting
      - Performance Test Coverage matrix
-     - 
+      -Use monitoring and observability tools 
      - Test should have individual reports, environment configuration
+     - Define baseline 
+     - ramp up throughput/concurent users
+     - Simulate production environment *watch for AWS costs
 
 
 
