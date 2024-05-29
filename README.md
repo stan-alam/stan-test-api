@@ -354,7 +354,7 @@ Automation scripts should scale
 ----
 SUT
 
-## Black Friday? What Black Friday?
+## Black Friday, Hapi Router performance
 
 https://twitter.com/hpoom/status/538264467998801920
 
@@ -363,7 +363,6 @@ https://x.com/hashtag/nodebf
 **basic hapi router - No validation or error handling outside of process start**
 
 ```js
-// new and improved stan-hapi-router.js 
 // to run : nohup node stan-hapi-router.js &
 // to kill : ps aux | grep stan-hapi-router.js
 //or 

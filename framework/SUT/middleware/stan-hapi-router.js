@@ -1,4 +1,3 @@
-// new and improved stan-hapi-router.js 
 // to run : nohup node stan-hapi-router.js &
 // to kill : ps aux | grep stan-hapi-router.js
 //or 
