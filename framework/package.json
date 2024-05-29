@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@hapi/hapi": "^21.3.9",
     "fs-extra": "^11.2.0",
     "hapi-router": "^3.5.0",
     "shelljs": "^0.8.5"
