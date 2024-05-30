@@ -444,3 +444,14 @@ process.on('Unhandled Error', (err) => {
 routerUp();
 
 ```
+
+**Sample Filmstrip of UI performance** 
+
+- Go into detail what these waterfall markings are
+
+- Possible bottlenecks
+
+<p align="center">
+  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/nannerl_io_UI_perf.gif"width="125%" height="125%">
+</p>
+
