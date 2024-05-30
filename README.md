@@ -308,7 +308,7 @@ Story:
 
 ## Performance Test Automation Plan
 
-- [ ] 
+- [ ] Placeholder
 
 - [ ] Reporting
      - Performance Test Coverage matrix
@@ -378,12 +378,17 @@ https://twitter.com/hpoom/status/538264467998801920
 https://x.com/hashtag/nodebf
 
 **basic hapi router - No validation or error handling outside of process start**
-
+**TO DO: create a fully functioning router with a relational db or flat file storage for demo**
+```ascii
+  TO DO: persistent data
+    dumb pipelines 
+    caching
+```
 ```js
-// to run : nohup node stan-hapi-router.js &
-// to kill : ps aux | grep stan-hapi-router.js
+// to run : $ nohup node stan-hapi-router.js &
+// to kill get the process ID : $ ps aux | grep stan-hapi-router.js
 //or 
-// pkill -f stan-hapi-router.js
+//$ pkill -f stan-hapi-router.js
 const { server } = require('@hapi/hapi');
 const routerUp = async () => {
 
@@ -452,8 +457,7 @@ routerUp();
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/nannerl_io_UI_perf.gif"width="125%" height="125%">
 </p>
 
-
-**discuss where these markings above correlate with this diagram**
+**Correlate the filmstrip recording with the diagram below**
 
 <p align="center">
   <img src="https://github.com/stan-alam/testing/blob/develop/perf/chrome/2022-10-27%2011_49_39-nav06.drawio%20-%20diagrams.net.png"width="125%" height="125%">
