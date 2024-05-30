@@ -452,3 +452,11 @@ routerUp();
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/nannerl_io_UI_perf.gif"width="125%" height="125%">
 </p>
 
+
+**discuss where these markings above correlate with this diagram**
+
+<p align="center">
+  <img src="https://github.com/stan-alam/testing/blob/develop/perf/chrome/2022-10-27%2011_49_39-nav06.drawio%20-%20diagrams.net.png"width="125%" height="125%">
+</p>
+
+
