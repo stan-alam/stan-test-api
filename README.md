@@ -277,7 +277,9 @@ Story:
 
 ## Are we meeting the Service level agreement (SLA)?  
 
+
 **Why are we performance testing :**
+
     
     i.e. 
     • Availability 
@@ -304,13 +306,9 @@ Story:
     - What metrics are we collecting?
 
 
-## API Performance Test Automation Plan
+## Performance Test Automation Plan
 
-- [ ] Identify services
-
-- [ ] Identify environments *may need to consult AWS representive when using high traffic simulations*
-
-- [ ] Identify User journeys - high traffic areas in API usage
+- [ ] Placeholder
 
 - [ ] Reporting
      - Performance Test Coverage matrix
@@ -370,7 +368,6 @@ Automation scripts should scale
 
 
 
-
 ----
 SUT
 
@@ -381,12 +378,17 @@ https://twitter.com/hpoom/status/538264467998801920
 https://x.com/hashtag/nodebf
 
 **basic hapi router - No validation or error handling outside of process start**
-
+**TO DO: create a fully functioning router with a relational db or flat file storage for demo**
+```ascii
+  TO DO: persistent data
+    dumb pipelines 
+    caching
+```
 ```js
-// to run : nohup node stan-hapi-router.js &
-// to kill : ps aux | grep stan-hapi-router.js
-// kill by process id
-// pkill -f stan-hapi-router.js
+// to run : $ nohup node stan-hapi-router.js &
+// to kill get the process ID : $ ps aux | grep stan-hapi-router.js
+//or 
+//$ pkill -f stan-hapi-router.js
 const { server } = require('@hapi/hapi');
 const routerUp = async () => {
 
@@ -454,3 +456,11 @@ routerUp();
 <p align="center">
   <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/nannerl_io_UI_perf.gif"width="125%" height="125%">
 </p>
+
+**Correlate the filmstrip recording with the diagram below**
+
+<p align="center">
+  <img src="https://github.com/stan-alam/testing/blob/develop/perf/chrome/2022-10-27%2011_49_39-nav06.drawio%20-%20diagrams.net.png"width="125%" height="125%">
+</p>
+
+
