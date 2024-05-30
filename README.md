@@ -205,6 +205,9 @@ cd framework\apitests\stan-test-api\
 
 }
 ```
+# Fonzi's blog on test parallelization
+
+https://fonzi.xyz/blog/test-parallelization/
 
 ## Test Strategy for Automation
 
