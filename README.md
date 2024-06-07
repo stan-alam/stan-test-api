@@ -2,9 +2,26 @@
 stan test for interview
 
 ```ascii
-We'll be using 'Cat As a Service' https://cataas.com/
+We'll be using 'Cat As a Service' as the SUT
+```
+ https://cataas.com/
 
+```ascii
+and local web app for UI
+```
+
+```ascii
 We'll explore a concept framework in Python, Java and in JavaScript
+
+I will follow some of Fonzi's(mentor) objectives
+
+- Apply Architecture Principles to the test Automation Framework
+- Implement a UI Automation Framework
+- Implement an API Automation Framework
+- Implement Feature Flagging to Tests to match the release cadence for the product platform. (This will be in documentation form)
+- Analyze test failures and determine root causes ( will fake performance bottlenecks and page failures)
+- Integrate the tests into a CI/CD pipeline in GitHub
+- Implement a Performance measuring automation framework with Lighthouse and Playwright. And measure page speeds and trends against the historical data.
 
 ```
 -------------------------------------------------------------------
