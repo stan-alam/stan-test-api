@@ -1,6 +1,15 @@
 # stan-test-api
 stan test for interview
 
+```ascii
+We'll be using 'Cat As a Service' https://cataas.com/
+
+We'll explore a concept framework in Python, Java and in JavaScript
+
+```
+-------------------------------------------------------------------
+## Deprecated 06.07.2024
+
 **mock API**
 https://my-json-server.typicode.com/stan-alam/stan-test-api/
 
@@ -47,6 +56,13 @@ https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 
 
 ```js
+
+// Verify that the status code is 200
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+    // Let's put a try/catch and a loop for error handling
+});
+
 jwt = pm.response.json().jwt;
 console.log(jwt);
 
@@ -67,11 +83,6 @@ collectionJWT = pm.collectionVariables.get(pm.response.json().jwt);
 //assign the jwt to the global var
 pm.globals.get(pm.response.json().jwt);
 let AuthToken = pm.globals.set("authToken", pm.response.json().jwt);
-
-// Verify that the status code is 200
-pm.test("Response status code is 200", function () {
-    pm.response.to.have.status(200);
-});
 
 // Verify that the response header is of Content-Type applicaiton/json
 pm.test("Response Content-Type header is 'application/json'", function () {
