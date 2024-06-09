@@ -16,8 +16,8 @@ We'll explore a concept framework in Python, Java and in JavaScript
 I will follow some of Fonzi's(mentor) objectives
 
 - Apply Architecture Principles to the test Automation Framework
-- Implement a UI Automation Framework
-- Implement an API Automation Framework
+- Implement a UI Automation Framework *view
+- Implement an API Automation Framework *using cats as a service, and stanHapiRouter
 - Implement Feature Flagging to Tests to match the release cadence for the product platform. (This will be in documentation form)
 - Analyze test failures and determine root causes ( will fake performance bottlenecks and page failures)
 - Integrate the tests into a CI/CD pipeline in GitHub
@@ -141,7 +141,7 @@ pm.test("Content-Type is present", function () {
     pm.response.to.have.header("Content-Type");
 });
 
-pm.test("Status code is 200", function () {
+pm.test("Status code is 201", function () {
     pm.response.to.have.status(201);
 });
 
