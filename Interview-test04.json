@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "c45da7e1-9f0e-4ed7-94a6-a92a34de285c",
+		"name": "Interview-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1928711"
+	},
+	"item": [
+		{
+			"name": "https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"jwt = pm.response.json().jwt;",
+							"console.log(jwt);",
+							"",
+							"// Verify the length of the JWT",
+							"pm.test(\"The length of the JWT must be greater than zero\", function () {",
+							"    const jwt = pm.response.json().jwt;",
+							"    pm.expect(jwt.length).to.be.greaterThan(0, \"JWT should not be empty\");",
+							"});",
+							"",
+							"// verify the header of the JWT",
+							"pm.test(\"the JWT must have the correct header\", function () {",
+							"     pm.expect(pm.response.json().jwt).contains(\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\");",
+							"});",
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response Content-Type header is 'application/json'\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Jwt should not be empty\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.jwt).to.exist.and.to.not.be.empty;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Jwt has a valid format\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData.jwt).to.be.a('string');",
+							"  pm.expect(responseData.jwt).to.match(/^[A-Za-z0-9-_]+\\.[A-Za-z0-9-_]+\\.[A-Za-z0-9-_]+$/);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Jwt is successfully saved in collection/globals for the next call\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.jwt).to.exist.and.to.be.a('string');",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken",
+					"protocol": "https",
+					"host": [
+						"my-json-server",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"stan-alam",
+						"stan-test-api",
+						"authtoken"
+					]
+				},
+				"description": "get the auth token ;\r\n\r\nvalidate the header of the jwt\r\n\r\nuse the jwt for the next call"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"2\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
+					"protocol": "https",
+					"host": [
+						"my-json-server",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"stan-alam",
+						"stan-test-api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"2\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://my-json-server.typicode.com/stan-alam/stan-test-api/posts",
+					"protocol": "https",
+					"host": [
+						"my-json-server",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"stan-alam",
+						"stan-test-api",
+						"posts"
+					]
+				},
+				"description": "post 2"
+			},
+			"response": []
+		}
+	]
+}

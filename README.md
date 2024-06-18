@@ -10,6 +10,12 @@ We'll be using 'Cat As a Service' as the SUT
 and local web app for UI
 ```
 
+## Helpful links
+
+https://developer.chrome.com/docs/devtools/performance
+
+https://developer.chrome.com/docs/devtools/performance/reference?hl=en#breadcrumbs
+
 ```ascii
 We'll explore a concept framework in Python, Java and in JavaScript
 
