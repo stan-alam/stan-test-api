@@ -1,6 +1,9 @@
 # stan-test-api
 stan test for interview
 
+old Node Test Automation Framework 
+https://github.com/stan-alam/node-framework
+
 ```ascii
 We'll be using 'Cat As a Service' as the SUT
 ```
