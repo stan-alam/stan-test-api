@@ -77,7 +77,7 @@ https://my-json-server.typicode.com/stan-alam/stan-test-api/authtoken
 ```
 
 <p align="center">
-  <img src="https://github.com/stan-alam/stan-test-api/blob/develop/framework/images/01.png"width="125%" height="125%">
+  <img src="https://raw.githubusercontent.com/stan-alam/stan-test-api/develop/framework/images/01.png"width="125%" height="125%">
 </p>
 
 
